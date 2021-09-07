@@ -1,5 +1,5 @@
 import React from 'react';
-import * as Styled from './syles';
+import * as Styled from './styles';
 import {Input} from '@components/common/Input';
 import {Button} from '@components/common/Button';
 import {Logo} from '@assets/icons/Logo';

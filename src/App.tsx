@@ -8,7 +8,7 @@
  * @format
  */
 
-import {Login} from '@pages/Login/index';
+import {Profile} from '@pages/Profile';
 import React from 'react';
 import 'react-native';
 import {StatusBar} from 'react-native';
@@ -17,7 +17,7 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <Login />
+      <Profile />
     </>
   );
 };
