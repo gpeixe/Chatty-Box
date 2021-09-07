@@ -1,18 +1,18 @@
 import React from 'react';
 import * as Styled from './styles';
+import {colors} from '../../../styles/colors';
 
 interface InputProps extends Styled.InputStyledProps {
-  text: string;
-  color: string;
+  color?: string;
   placeholder: string;
+  placeholderTextColor?: string;
 }
 
-const Button: React.FC<InputProps> = ({...rest}) => {
+export const Input: React.FC<InputProps> = props => {
   return (
-    <Styled.Container>
-      <Styled.TextField {...rest} />
-    </Styled.Container>
+    <Styled.TextInput
+      {...props}
+      placeholderTextColor={props.placeholderTextColor || colors.textSecondary}
+    />
   );
 };
-
-export default Button;

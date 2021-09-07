@@ -1,8 +1,8 @@
-import {colors} from 'src/styles/colors';
+import {colors} from '../../../styles/colors';
 import styled, {css} from 'styled-components/native';
 
 export interface ButtonStyledProps {
-  color: string;
+  color?: string;
 
   marginTop?: string;
   marginRight?: string;
@@ -24,11 +24,12 @@ export interface ButtonStyledProps {
   flex?: number;
 }
 
-export const Container = styled.View<ButtonStyledProps>`
-  flex: 1;
-  background-color: ${props => props.color || colors.colorPrimary};
+export const Button = styled.TouchableOpacity<ButtonStyledProps>`
   justify-content: center;
   align-items: center;
+
+  background-color: ${props => props.color || colors.colorPrimary};
+
   height: ${props => props.height || '56px'};
   width: ${props => props.width || '100%'};
 
@@ -61,4 +62,10 @@ export const Container = styled.View<ButtonStyledProps>`
     css`
       border-width: ${props.borderWidth};
     `}
+`;
+
+export const Text = styled.Text`
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
 `;
