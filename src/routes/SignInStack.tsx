@@ -18,7 +18,7 @@ export function SignInStack() {
         initialRouteName={pages.login}
         screenOptions={{headerMode: 'screen', headerShown: false}}>
         <Stack.Screen name={pages.login} component={Login} />
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name={pages.profile} component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );
