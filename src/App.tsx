@@ -8,17 +8,18 @@
  * @format
  */
 
-import {Profile} from '@pages/Profile';
 import React from 'react';
 import 'react-native';
 import {StatusBar} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import {SignInStack} from './routes/SignInStack';
 
 const App = () => {
   return (
-    <>
+    <SafeAreaProvider>
       <StatusBar barStyle="light-content" />
-      <Profile />
-    </>
+      <SignInStack />
+    </SafeAreaProvider>
   );
 };
 

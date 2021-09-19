@@ -4,6 +4,7 @@ import * as Styled from './styles';
 interface ButtonProps extends Styled.ButtonStyledProps {
   text: string;
   color?: string;
+  onPress?: any;
 }
 
 export const Button: React.FC<ButtonProps> = props => {

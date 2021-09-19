@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as Styled from './styles';
 import {Input} from '@components/common/Input';
 import {Button} from '@components/common/Button';
 import {Logo} from '@assets/icons/Logo';
+import {ChallengeModal} from './ChallengeModal';
 
 export const Login: React.FC = () => {
+  const [showModal, setShowModal] = useState<boolean>(false);
   return (
     <Styled.Container>
       <Logo />
@@ -39,7 +41,11 @@ export const Login: React.FC = () => {
         borderRadius="5px"
         marginBottom="32px"
         height="43px"
+        onPress={() => {
+          setShowModal(true);
+        }}
       />
+      <ChallengeModal showModal={showModal} setShowModal={setShowModal} />
     </Styled.Container>
   );
 };

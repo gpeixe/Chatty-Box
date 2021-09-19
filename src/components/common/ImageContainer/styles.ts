@@ -1,34 +1,34 @@
 import styled from 'styled-components/native';
 
-export interface ImageProps {
+export interface IImageProps {
   width: number;
   height: number;
-  borderRadius: string;
+  borderRadius: number;
 
-  paddingTop?: string;
-  paddingRight?: string;
-  paddingBottom?: string;
-  paddingLeft?: string;
+  paddingTop?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
 
-  marginTop?: string;
-  marginRight?: string;
-  marginBottom?: string;
-  marginLeft?: string;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number;
+  marginLeft?: number;
 }
 
-export const Image = styled.Image<ImageProps>`
+export const Image = styled.Image<IImageProps>`
   width: ${props => `${props.width}px` || '50px'};
   height: ${props => `${props.height}px` || '50px'};
 
-  border-radius: ${props => props.borderRadius || '50px'};
+  border-radius: ${props => `${props.borderRadius}px` || '50px'};
 
-  padding-top: ${props => props.paddingTop || '0px'};
-  padding-right: ${props => props.paddingRight || '0px'};
-  padding-bottom: ${props => props.paddingBottom || '0px'};
-  padding-left: ${props => props.paddingLeft || '0px'};
+  padding-top: ${props => `${props.paddingTop}px` || '0px'};
+  padding-right: ${props => `${props.paddingRight}px` || '0px'};
+  padding-bottom: ${props => `${props.paddingBottom}px` || '0px'};
+  padding-left: ${props => `${props.paddingLeft}px` || '0px'};
 
-  margin-top: ${props => props.marginTop || '0px'};
-  margin-right: ${props => props.marginRight || '0px'};
-  margin-bottom: ${props => props.marginBottom || '0px'};
-  margin-left: ${props => props.marginLeft || '0px'};
+  margin-top: ${props => `${props.marginTop}px` || '0px'};
+  margin-right: ${props => `${props.marginRight}px` || '0px'};
+  margin-bottom: ${props => `${props.marginBottom}px` || '0px'};
+  margin-left: ${props => `${props.marginLeft}px` || '0px'};
 `;

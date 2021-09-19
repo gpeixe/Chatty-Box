@@ -3,7 +3,7 @@ import {ImageProps} from 'react-native';
 
 import * as Styled from './styles';
 
-interface ImageContainerProps extends Styled.ImageProps {
+interface ImageContainerProps extends Styled.IImageProps {
   source: string | ImageProps;
   resizeMode?: 'center' | 'cover' | 'contain' | 'stretch';
 }

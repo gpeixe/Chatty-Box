@@ -33,7 +33,7 @@ export const Profile: React.FC = () => {
             source={profilePicture.path}
             width={198}
             height={198}
-            borderRadius="99px"
+            borderRadius={99}
           />
         ) : (
           <SelectPhoto />
